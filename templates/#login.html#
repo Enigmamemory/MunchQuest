@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<title> Welcome! </title>
+
+<style type="text/css">
+/* pushes the page to the full capacity of the viewing area */
+html {height:100%;}
+body {height:100%; margin:0; padding:0;}
+/* prepares the background image to full capacity of the viewing area */
+#bg {position:fixed; top:0; left:0; width:100%; height:100%;}
+/* places the content ontop of the background image */
+#content {position:relative; z-index:1;}
+</style>
+<!--[if IE 6]>
+<style type="text/css">
+/* some css fixes for IE browsers */
+html {overflow-y:hidden;}
+body {overflow-y:auto;}
+#bg {position:absolute; z-index:-1;}
+#content {position:static;}
+</style>
+
+<![endif]-->
+
+</head>
+
+<body>
+
+<div id="bg"><img src="P4.jpg" width="100%" height="100%" alt=""></div>
+<div id="content">
+
+<marquee direction="right" behavior="alternate"><font style="Times New Roman" size="6" color="red">Hello There!</font></marquee>
+
+<table width="100%">
+<tr>
+<td>
+<center>
+<table width = "900" style="background-color:white;opacity:.8;">
+<tr>
+<td>
+<font style="Comic Sans MS" size="6" color="blue">Alex's Portfolio</font>:
+
+<font style = "Times New Roman" color = "blue">
+<ul>
+	<li><a href="http://149.89.151.100/~alexander.hu/madlib.py">Madlibs Project</a></li>
+	<li><a href="http://149.89.151.100/~alexander.hu/data01.py">Data Project</a></li>
+	<li><a href="http://149.89.151.100/~alexander.hu/analysis.html">Data Project Analysis</a></li>
+	<li><a href="http://149.89.151.100/~alexander.hu/HW35/Volume.html">Volume Calculator</a></li>
+	<li><a href="http://149.89.151.100/~alexander.hu/rot13/rot13.html">Rotation/Encoder Project</a></li>
+	<li><a href="http://bart.stuy.edu/~lise.ho/Voting/vote.html">Vote for Being HAPPY</a></li>
+	<li><a href="http://149.89.151.100/~chesley.tan/forms/FinalProject/Chat.html">Final Project</a></li>
+</ul>
+</font>
+
+<center>
+<font style = "Comic Sans MS" size = "6" color="red" /> Questions? Comments? Throw 'em at me here. The code sucks and doesn't cover for any of the wack stuff though, so don't try Danny/Chesley. Please.</font>
+<form name="input" method="GET" action="login.py">
+
+Username: <input type="text" name="user" size="30"> <br>
+
+Message:  <textarea rows="8" name="message" cols="25">
+</textarea> <br>
+
+<input type="submit" value="Submit">
+
+</form>
+<br/>
+<br/>
+<font style="Impact" size="6" />Proud Member Of:</font>
+<br/>
+<br/>
+<img src="The Clamperl Cult.jpg" />
+</center>
+<br>
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br/>
+<br/>
+<br/>
+</center>
+</td>
+</tr>
+</table>
+</body>
+</html>

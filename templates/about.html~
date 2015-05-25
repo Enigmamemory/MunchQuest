@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block heading %}
+This Quest Will Still Suck
+{% endblock heading %}
+{% block screenmicro %}
+<center>
+
+  This is supposed to be a homescreen
+  <form action="/">
+    <input type="submit" value="Back"
+  </form>
+   
+</center>
+{% endblock screenmicro%}
