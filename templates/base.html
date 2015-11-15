@@ -2,8 +2,6 @@
 <html>
   
   <head>
-    
-
 
     <title>
       {% block heading %}
@@ -11,96 +9,14 @@
       {% endblock heading %}
     </title>
 
-    <link rel="stylesheet" type="text/css"></link>
-
-    <style type ="text/css">
-
-      html{
-      height:100%;
-      }
-      
-      body{
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      }
-      
-      table {
-      background-color: white;
-      opacity: .7;
-      }
-
-      td.text {
-      vertical-align: top;
-      text-align: left;
-      }
-
-      #block
-      {
-      width: 1000px;
-      height: 648px;
-      }
-      
-      #window
-      {
-      margin: 100px auto;
-      background-size: 120% 120%;
-      background-image:url(http://i.imgur.com/mAaZ7Xn.jpg);
-      background-repeat:no-repeat;
-      background-position: center center;
-      width: 1152px;
-      height: 648px;
-      }
-
-      input[type=submit] {
-      -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-      -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-      box-shadow:inset 0px 1px 0px 0px #97c4fe;
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
-      background:-moz-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
-      background:-webkit-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
-      background:-o-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
-      background:-ms-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
-      background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0',GradientType=0);
-      background-color:#3d94f6;
-      -moz-border-radius:6px;
-      -webkit-border-radius:6px;
-      border-radius:6px;
-      border:1px solid #337fed;
-      display:inline-block;
-      cursor:pointer;
-      color:#ffffff;
-      font-family:Arial;
-      font-size:15px;
-      font-weight:bold;
-      padding:6px 24px;
-      text-decoration:none;
-      text-shadow:0px 1px 0px #1570cd;
-      }
-
-      input[type=submit]:hover {
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6));
-      background:-moz-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
-      background:-webkit-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
-      background:-o-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
-      background:-ms-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
-      background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6',GradientType=0);
-      background-color:#1e62d0;
-      }
-
-      input[type=submit]:active {
-      position:relative;
-      top:1px;
-      }
-
-
-    </style>
-
+    <link rel="stylesheet" href="static/base.css" type="text/css"></link>
+    <link rel="stylesheet" href="static/story.css">
+    
   </head>
 
   <body>
+    {% block testing %}
+    {% endblock testing %}
     <div id = "window">
       <center>
 	<table width = "1000">
@@ -110,7 +26,28 @@
 	    <td height = "648">
 	      <center>
 		<h1> MunchQuest </h1>
-		<form action="/story">
+		<form method="POST" action="/story">
+		  <input type = "hidden" name = "newGame" value = "True">
+		  <input type = "hidden" name = "Name" value = "Drake">
+		  <input type = "hidden" name = "Class" value = "Human">
+		  <input type = "hidden" name = "HP" value = "30">
+		  <input type = "hidden" name = "Damage" value = "Str">
+		  <input type = "hidden" name = "Str" value = "5">
+		  <input type = "hidden" name = "Mag" value = "5">
+		  <input type = "hidden" name = "Res" value = "5">
+		  <input type = "hidden" name = "Wis" value = "5">
+		  <input type = "hidden" name = "Spd" value = "5">
+		  <input type = "hidden" name = "Int" value = "5">
+		  <input type = "hidden" name = "Agi" value = "5">
+		  <input type = "hidden" name = "Head" value = "">
+		  <input type = "hidden" name = "MHand" value = "">
+		  <input type = "hidden" name = "SHand" value = "">
+		  <input type = "hidden" name = "THand" value = "">
+		  <input type = "hidden" name = "Armor" value = "">
+		  <input type = "hidden" name = "Feet" value = "">
+		  <input type = "hidden" name = "Storage" value = "">
+		  <input type = "hidden" name = "Doors" value = "">
+		  <input type = "hidden" name = "Treasure" value = "">
 		  <input type = "submit" value="New Game">
 		</form>
 		<form action="/loadgame">
@@ -133,6 +70,8 @@
 	</table>
       </center>
     </div>
-  </body>
+    {% block jscrap %}
+    
+    {% endblock jscrap %}
 
 </html>

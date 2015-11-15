@@ -2,20 +2,64 @@
 {% block heading %}
 Try Not to Get Killed Please
 {% endblock heading %}
+{% block testing %}
+{% endblock testing %}
 {% block screenmicro %}
 <td class = "text" height = "648">
-  <table width = "480" margin = "auto">
+  <table width = "580" margin = "auto" style="table-layout:fixed">
     <tr>
       <td class = "text" height = "324">
-	Will need to change class later, prob
+	<div class="scroll">
+	  <span id="Doors">{{Doors}}</span>
+	  <span id="Treasures">{{Treasures}}</span>
+	  Need to change class later
+	  <br>
+	  Name: <span id="Name">{{Name}}</span>
+	  <br>
+	  Class: <span id="Class">{{Class}}</span>
+	  <br>
+	  HP: <span id="HP">{{HP}}</span>
+	  <br>
+	  Type: <span id="Damage">{{Damage}}</span>
+	  <br>
+	  Str: <span id="Str">{{Str}}</span>
+	  <br>
+	  Mag: <span id="Mag">{{Mag}}</span>
+	  <br>
+	  Res: <span id="Res">{{Res}}</span>
+	  <br>
+	  Wis: <span id="Wis">{{Wis}}</span>
+	  <br>
+	  Spd: <span id="Spd">{{Spd}}</span>
+	  <br>
+	  Int: <span id="Int">{{Int}}</span>
+	  <br>
+	  Agi: <span id="Agi">{{Agi}}</span>
+	  <br>
+	  Head: <span id="Head">{{Head}}</span>
+	  <br>
+	  Main: <span id="MHand">{{MHand}}</span>
+	  <br>
+	  Sub: <span id="SHand">{{SHand}}</span>
+	  <br>
+	  2-Hand: <span id="THand">{{THand}}</span>
+	  <br>
+	  Armor: <span id="Armor">{{Armor}}</span>
+	  <br>
+	  Feet: <span id="Feet">{{Feet}}</span>
+	</div>
       </td>
       <td class = "text" height = "324">
-	Item Stats/Enemy Stats
+	<div id="scroll" height = "324">
+	  Item Stats/Enemy Stats
+	</div>
       </td>
     </tr>
     <tr>
       <td class = "text" height = "324">
 	Menu Commands
+	<br>
+	Cards in Hand: <span id="Storage">{{Storage}}</span>
       </td>
       <td class = "text" height = "324">
 	Subcommands
@@ -24,7 +68,7 @@ Try Not to Get Killed Please
   </table>
 </td>
 <td class = "text" height = "648">
-  <table width = "480" margin = "auto">
+  <table width = "380" margin = "auto">
     <tr>
       <td class = "text" height = "324">
 	Enemy Screen/Shopkeeper Store/Story Screen
@@ -33,6 +77,8 @@ Try Not to Get Killed Please
     <tr>
       <td class = "text" height = "224">
 	Battle Commands/Battle results each turn
+	<br>
+	<button class="myButton" id="lootdungeon">Loot Dungeon</button>
       </td>
     </tr>
     <tr>
@@ -42,3 +88,9 @@ Try Not to Get Killed Please
     </tr>
 </td>
 {% endblock screenmicro %}
+{% block jscrap %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+<script src="/static/story.js"></script>
+{% endblock jscrap %}
+</body>
